@@ -1,0 +1,5 @@
+name,serving_unit,calories_per_unit,protein_per_unit,carbs_per_unit,fat_per_unit,is_veg
+Chicken Breast,g,165,31,0,3.6,false
+Rice (Cooked),g,130,2.7,28,0.3,true
+Almonds,g,579,21,22,50,true
+Egg (Boiled),g,155,13,1.1,11,false
