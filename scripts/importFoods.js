@@ -1,17 +1,17 @@
+const dotenv=require('dotenv')
 const mongoose = require('mongoose');
 const fs = require('fs');
 const csv = require('csv-parser');
-require('dotenv').config();
 const Food = require('../models/Food');
+const connectDB = require('../config/db.js');
 
-mongoose.connect(process.env.DATABASE_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+dotenv.config({ path: '../.env' });
+
+connectDB();
 
 const results = [];
 
-fs.createReadStream('data/foods.csv')
+fs.createReadStream('../data/foods.csv')
   .pipe(csv())
   .on('data', (row) => {
     results.push({
